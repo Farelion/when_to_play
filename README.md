@@ -7,6 +7,7 @@
 
 
 <a name="Required"/>
+
 ### Required:<br/>
 Those you have to install:<br/>
 - [Node.js](https://nodejs.org/) <br/>
@@ -19,6 +20,7 @@ Those you can install manually or you will get them by npm install command later
 - [Sass](https://sass-lang.com/install)
 
 <a name="Installation"/>
+
 ### Installation
 First clone repo
 ```node
@@ -55,12 +57,14 @@ If everything worked you should see live app here [localhost:3000](http://localh
 <br /><br />
 
 <a name="Styles"/>
+
 ### Styles
 `npm run sass` - compile sass to css <br /><br />
 `npm run sass-watch` - compile sass to css and watch for changes 
 
 
 <a name="Changing-accounts"/>
+
 ### Changing accounts
 
 If you want to change accounts to yours, heres step by step guide<br />
