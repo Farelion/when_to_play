@@ -65,10 +65,10 @@ If you want to change accounts to yours, heres step by step guide<br />
 ...
 ```
 <br />
-7. Now you need change three things in app.js:
-- region
-- accountId
-- id
+7. Now you need change three things in app.js:<br />
+- region <br />
+- accountId <br />
+- id <br />
 
 ```node
   ... 
