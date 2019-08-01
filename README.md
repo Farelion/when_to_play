@@ -26,6 +26,10 @@ First clone repo
 ```node
 git clone https://github.com/farelion/when_to_play.git
 ```
+Get inside cloned folder
+```node
+cd when_to_play
+```
 Then install all dependencies
 ```node
 npm install
