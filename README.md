@@ -124,4 +124,4 @@ If you want to change accounts to yours, heres step by step guide<br />
 
 ### Known bugs
 
-- Sometimes parts of data do not load. Try to refresh until you load all data. Might be tied with riot api refresh limit rate.
+- Sometimes parts of data do not load. Try to refresh until you load all data. Might be tied to riot api refresh limit rate.
