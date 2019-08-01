@@ -1,10 +1,13 @@
 # When_to_play <br/>
-[Node.js](https://nodejs.org/) <br/>
-[npm](https://www.npmjs.org/) <br/>
-[Express.js](https://expressjs.com/) <br/>
-[Pug.js](https://pugjs.org/api/getting-started.html) <br/>
-[TeemoJS](https://github.com/MingweiSamuel/TeemoJS) <br/>
-[Sass](https://sass-lang.com/install)
+### Required:<br/>
+Those you have to install:<br/>
+- [Node.js](https://nodejs.org/) <br/>
+- [npm](https://www.npmjs.org/) <br/><br/>
+Those you can install manually or by command later:<br/>
+- [Express.js](https://expressjs.com/) <br/>
+- [Pug.js](https://pugjs.org/api/getting-started.html) <br/>
+- [TeemoJS](https://github.com/MingweiSamuel/TeemoJS) <br/>
+- [Sass](https://sass-lang.com/install)
 
 First clone repo
 ```node
