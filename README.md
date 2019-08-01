@@ -65,6 +65,7 @@ If you want to change accounts to yours, heres step by step guide<br />
 ...
 ```
 <br />
+
 7. Now you need change three things in app.js:<br />
 - [Region](https://developer.riotgames.com/regional-endpoints.html) <br />
 - AccountId <br />
