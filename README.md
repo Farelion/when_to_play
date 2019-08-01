@@ -29,10 +29,8 @@ So it looks like this
 "getMatchlist1": "/lol/match/v4/matchlists/by-account/%s?endIndex=1&beginIndex=0&",
 "getMatchTimeline": "/lol/match/v4/timelines/by-match/%s"
 ```      
-      
 <br />
 We are ready to start app
-
 ```node
 npm start
 ```
