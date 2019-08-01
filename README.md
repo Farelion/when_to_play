@@ -4,9 +4,10 @@
 2. [Installation](#Installation) 
 3. [Styles](#Styles) 
 4. [Changing accounts](#Changing-accounts) 
-[Headers](#headers) 
+5. [Headers](#headers) 
 
 ...snip...    
+
 <a name="headers"/>
 ## Headers
 
