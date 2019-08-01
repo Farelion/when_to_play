@@ -6,7 +6,7 @@
 4. [Changing accounts](#Changing-accounts) 
 5. [Headers](#headers) 
 
-...snip...    
+
 
 <a name="headers"/>
 ## Headers
