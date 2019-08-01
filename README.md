@@ -45,19 +45,19 @@ If everything worked you should see live app here [localhost:3000](http://localh
 <br /><br />
 ### Changing accounts
 
-[Riot API](https://developer.riotgames.com/api-methods/#summoner-v4/GET_getBySummonerName)
-Click on second GET - Get a summoner by summoner name
-Scroll down to PATH PARAMETERS and as value use your summoner name
-Choose region below
-Hit EXECUTE REQUEST
-Under RESPONSE BODY you will see
+[Riot API](https://developer.riotgames.com/api-methods/#summoner-v4/GET_getBySummonerName)<br />
+Click on second GET - Get a summoner by summoner name<br />
+Scroll down to PATH PARAMETERS and as value use your summoner name<br />
+Choose region below<br />
+Hit EXECUTE REQUEST<br />
+Under RESPONSE BODY you will see<br />
 ```node
 ...
 "accountId": "YOUR ACCOUNTID",
 "id": "YOUR ID",
 ...
 ```
-
+<br />
 Now you need to put your accountid and id inside app.js
 ```node
   ... 
@@ -88,6 +88,7 @@ Now you need to put your accountid and id inside app.js
 
 
 <br />
+
 ### Styles
 `npm run sass` - compile sass to css <br /><br />
 `npm run sass-watch` - compile sass to css and watch for changes 
