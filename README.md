@@ -18,5 +18,5 @@ let api = TeemoJS('RGAPI-KEY-HERE');
 `npm start` - start application on [localhost:3000](http://localhost:3000/)
 
 ### Styles
-`npm run sass` - comiple sass to css <br /><br />
+`npm run sass` - compile sass to css <br /><br />
 `npm run sass-watch` - compile sass to css and watch for changes 
