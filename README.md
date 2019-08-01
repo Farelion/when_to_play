@@ -65,11 +65,14 @@ If you want to change accounts to yours, heres step by step guide<br />
 ...
 ```
 <br />
-7. Now you need to put your accountid and id inside app.js
+7. Now you need change three things in app.js:
+- region
+- accountId
+- id
 
 ```node
   ... 
-  api.get('eun1', 'match.getMatchlist1','YOUR_ACCOUNTID_HERE') //accountid here
+  api.get('YOUR_REGION_HERE', 'match.getMatchlist1','YOUR_ACCOUNTID_HERE') //accountid here
   .then(data=>{
     barcodeLastPlayed = data.matches[0].timestamp;
     barcodeDecay = barcodeLastPlayed + 2419200000;
@@ -77,12 +80,12 @@ If you want to change accounts to yours, heres step by step guide<br />
     barcodeDecay = new Date(barcodeDecay).toLocaleString();
     barcodePlatform = data.matches[0].platformId;
   })
-  api.get('eun1', 'summoner.getByAccountId', 'YOUR_ACCOUNTID_HERE') //accountid here
+  api.get('YOUR_REGION_HERE', 'summoner.getByAccountId', 'YOUR_ACCOUNTID_HERE') //accountid here
   .then(data =>{
     barcodeIconId = data.profileIconId;
     barcodeName = data.name;
   })
-  api.get('eun1', 'league.getLeagueEntriesForSummoner', 'YOUR_ID_HERE') //id here
+  api.get('YOUR_REGION_HERE', 'league.getLeagueEntriesForSummoner', 'YOUR_ID_HERE') //id here
     .then(data =>{
       barcodeRank = data[0].tier;
       barcodeDiv = data[0].rank;
