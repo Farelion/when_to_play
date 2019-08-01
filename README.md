@@ -1,7 +1,7 @@
 # When_to_play <br/>
 
 #### Disclaimer <br/>
-Keep in mind that its non-commercial project with purpose of learning new things. Its pretty much my first contact with most of technologies used there (even writing this documentation). Feel free to msg me if you have any questions/tips.
+Keep in mind that its non-commercial project with purpose of learning new things, also was created to automatize some stuff that had to be done manually. Its pretty much my first contact with most of technologies used there (even writing this documentation). Feel free to msg me if you have any questions/tips.
 
 ### Table of contents
 1. [Required](#Required)  
