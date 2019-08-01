@@ -4,7 +4,7 @@
 2. [Installation](#Installation) 
 3. [Styles](#Styles) 
 4. [Changing accounts](#Changing-accounts) 
-
+5. [Known bugs](#Known-bugs) 
 
 <a name="Required"/>
 
@@ -119,3 +119,9 @@ If you want to change accounts to yours, heres step by step guide<br />
 ```
 
 <br />
+
+<a name="Known-bugs"/>
+
+### Known bugs
+
+- Sometimes parts of data do not load. Try to refresh until you load all data. Might be tied with riot api refresh limit rate.
