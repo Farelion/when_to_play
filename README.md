@@ -1,4 +1,16 @@
 # When_to_play <br/>
+### Table of contents
+1. [Required](#Required)  
+2. [Installation](#Installation) 
+3. [Styles](#Styles) 
+4. [Changing accounts](#Changing-accounts) 
+[Headers](#headers) 
+
+...snip...    
+<a name="headers"/>
+## Headers
+
+
 ### Required:<br/>
 Those you have to install:<br/>
 - [Node.js](https://nodejs.org/) <br/>
