@@ -13,7 +13,8 @@ git clone https://github.com/farelion/when_to_play.git
 Then install all dependencies
 ```node
 npm install
-```<br/>
+```
+<br/>
 Put in your [RIOT API](https://developer.riotgames.com/) key
 
 ```node
