@@ -6,6 +6,15 @@
 [TeemoJS](https://github.com/MingweiSamuel/TeemoJS) <br/>
 [Sass](https://sass-lang.com/install)
 
+
+`npm install` - install all dependencies <br/><br/>
+Put in your riot API key. you can generate one here: [RIOT API](https://developer.riotgames.com/)
+
+```node
+let api = TeemoJS('RGAPI-KEY-HERE');
+```
+<br />
+
 `npm start` - start application on [localhost:3000](http://localhost:3000/)
 
 ### Styles
