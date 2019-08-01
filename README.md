@@ -14,26 +14,23 @@ Then install all dependencies
 ```node
 npm install
 ```
-<br/>
 Put in your [RIOT API](https://developer.riotgames.com/) key
 
 ```node
 let api = TeemoJS('RGAPI-KEY-HERE');
 ```
-<br />
-
 Add this code in node_modules\teemojs\defaultConfig.json
 ```node
 "getMatchlist1": "/lol/match/v4/matchlists/by-account/%s?endIndex=1&beginIndex=0&",
 ```
 So it looks like this
-```nodew
+```node
 "getMatchlist": "/lol/match/v4/matchlists/by-account/%s",
 "getMatchlist1": "/lol/match/v4/matchlists/by-account/%s?endIndex=1&beginIndex=0&",
 "getMatchTimeline": "/lol/match/v4/timelines/by-match/%s"
 ```      
       
-<br /><br />
+<br />
 We are ready to start app<br />
 
 ```node
