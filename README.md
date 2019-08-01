@@ -6,11 +6,14 @@
 [TeemoJS](https://github.com/MingweiSamuel/TeemoJS) <br/>
 [Sass](https://sass-lang.com/install)
 
+First clone repo
 ```node
 git clone https://github.com/farelion/when_to_play.git
 ```
-
-`npm install` - install all dependencies <br/><br/>
+Then install all dependencies
+```node
+npm install
+```<br/>
 Put in your [RIOT API](https://developer.riotgames.com/) key
 
 ```node
