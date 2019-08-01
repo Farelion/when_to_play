@@ -9,6 +9,7 @@ Those you can install manually or you will get them by npm install command later
 - [TeemoJS](https://github.com/MingweiSamuel/TeemoJS) <br/>
 - [Sass](https://sass-lang.com/install)
 
+### Setup
 First clone repo
 ```node
 git clone https://github.com/farelion/when_to_play.git
