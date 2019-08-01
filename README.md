@@ -1,4 +1,8 @@
 # When_to_play <br/>
+
+###Disclaimer
+Keep in mind that its non-commercial project with purpose of learning new things. Its pretty much my first contact with most of technologies used there (even writing this documentation). Feel free to msg me if you have any questions/tips.
+
 ### Table of contents
 1. [Required](#Required)  
 2. [Installation](#Installation) 
