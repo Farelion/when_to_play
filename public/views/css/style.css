@@ -1,0 +1,217 @@
+body {
+  font-family: Roboto, sans-serif;
+  background-color: #1c133e;
+}
+
+.bodytopmargin {
+  margin: 15px;
+}
+
+.profiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.profiles .profile-container {
+  flex-grow: 1;
+  width: 33%;
+  height: 100%;
+  align-items: center;
+  max-width: 30rem;
+  min-width: 25rem;
+  box-shadow: rgba(21, 11, 37, 0.5) 0px 2px 10px 0px;
+  background-color: rgba(49, 41, 85, 0.85);
+  margin-bottom: 2rem;
+  border-radius: 6px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #3b2d6a;
+  border-image: initial;
+  overflow: hidden;
+}
+@media only screen and (max-width: 1024px) {
+  .profiles .profile-container {
+    min-width: 51%;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1540px) {
+  .profiles .profile-container {
+    min-width: 40%;
+  }
+}
+@media only screen and (min-width: 1541px) {
+  .profiles .profile-container {
+    min-width: 25rem;
+  }
+}
+.profiles .profile-container .profile-info {
+  display: flex;
+  margin: 1rem 0px 2.8rem 0px;
+  align-items: center;
+  justify-content: center;
+}
+.profiles .profile-container .profile-info .profile-info-text {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-top: 0.7rem;
+}
+.profiles .profile-container .profile-info .profile-info-text .profile-info-name {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: normal;
+  color: #8890b5;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.profiles .profile-container .profile-info .profile-info-text .profile-info-when {
+  z-index: 0;
+  margin-right: 0.5rem;
+}
+.profiles .profile-container .profile-info .profile-info-text .profile-info-when .profile-info-when-lastplayed-uppertext {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #8991b6;
+  margin-top: 1rem;
+}
+.profiles .profile-container .profile-info .profile-info-text .profile-info-when .profile-info-when-lastplayed-lowertext {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #8991b6;
+  margin-top: 0.3rem;
+}
+.profiles .profile-container .profile-info .profile-info-text .profile-info-when .profile-info-when-decay-uppertext {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #8991b6;
+  margin-top: 1rem;
+}
+.profiles .profile-container .profile-info .profile-info-text .profile-info-when .profile-info-when-decay-lowertext {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #8991b6;
+  margin-top: 0.3rem;
+}
+.profiles .profile-container .profile-info .profile-info-img-wrapper {
+  width: 6.5rem;
+  height: 6.5rem;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+  flex: 0 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px 0px;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(#c29e52 0px, #7a5a26 88%, #a88449);
+  border-radius: 100%;
+  padding: 3px;
+}
+.profiles .profile-container .profile-info .profile-info-img-wrapper .profile-info-img {
+  border-radius: 100%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.profiles .profile-container .profile-info .profile-info-img-wrapper .profile-info-img img {
+  position: relative;
+  z-index: 10;
+  border-radius: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #11172c;
+  border-image: initial;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s ease-in-out 0s;
+}
+.profiles .profile-container .profile-ranked {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  min-height: 6rem;
+  overflow: hidden;
+  justify-content: center;
+  width: 100%;
+  background-color: rgba(25, 20, 54, 0.5);
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  border-radius: 3px;
+  overflow: hidden;
+  padding: 13px 0px 13px 0px;
+}
+.profiles .profile-container .profile-ranked .profile-ranked-img-wrapper {
+  width: 10rem;
+  height: 10rem;
+  margin-right: 1.2rem;
+  flex: 0 0 auto;
+  position: relative;
+  z-index: 1;
+  padding: 0px;
+}
+.profiles .profile-container .profile-ranked .profile-ranked-img-wrapper .profile-ranked-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.profiles .profile-container .profile-ranked .profile-ranked-img-wrapper .profile-ranked-img img {
+  position: relative;
+  z-index: 10;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s ease-in-out 0s;
+}
+.profiles .profile-container .profile-ranked .profile-ranked-rank .profile-ranked-uppertext {
+  display: flex;
+  margin-bottom: 0.8rem;
+  flex-direction: column;
+}
+.profiles .profile-container .profile-ranked .profile-ranked-rank .profile-ranked-uppertext span.profile-ranked-server {
+  color: #8890b5;
+  padding-bottom: 0.5rem;
+  text-transform: capitalize;
+  white-space: nowrap;
+  letter-spacing: 0.4px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+}
+.profiles .profile-container .profile-ranked .profile-ranked-rank .profile-ranked-uppertext span.profile-ranked-uppertext-div {
+  color: white;
+  text-transform: capitalize;
+  white-space: nowrap;
+  letter-spacing: 0.4px;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.profiles .profile-container .profile-ranked .profile-ranked-rank .profile-ranked-lowertext {
+  text-align: center;
+}
+.profiles .profile-container .profile-ranked .profile-ranked-rank .profile-ranked-lowertext span.profile-ranked-lowertext-games {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #8890b5;
+  white-space: nowrap;
+}
+.profiles .profile-container .profile-ranked .profile-ranked-rank .profile-ranked-lowertext span.profile-ranked-lowertext-between {
+  margin: 0px 0.4rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+.profiles .profile-container .profile-ranked .profile-ranked-rank .profile-ranked-lowertext span.profile-ranked-lowertext-wr {
+  color: white;
+  font-size: 1.2rem;
+}
+.profiles .placeholder-profile {
+  background-color: #1c133e;
+  box-shadow: none;
+  border: none;
+}
+
+/*# sourceMappingURL=style.css.map */
