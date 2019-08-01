@@ -60,8 +60,8 @@ If you want to change accounts to yours, heres step by step guide<br />
 6. Under RESPONSE BODY you will see<br />
 ```node
 ...
-"accountId": "YOUR ACCOUNTID",
-"id": "YOUR ID",
+"accountId": "YOUR_ACCOUNTID",
+"id": "YOUR_ID",
 ...
 ```
 <br />
