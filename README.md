@@ -71,25 +71,25 @@ If you want to change accounts to yours, heres step by step guide<br />
   ... 
   api.get('eun1', 'match.getMatchlist1','YOUR_ACCOUNTID_HERE') //accountid here
   .then(data=>{
-    uwumidLastPlayed = data.matches[0].timestamp;
-    uwumidDecay = uwumidLastPlayed + 2419200000;
-    uwumidLastPlayed = new Date(uwumidLastPlayed).toLocaleString();
-    uwumidDecay = new Date(uwumidDecay).toLocaleString();
-    uwumidPlatform = data.matches[0].platformId;
+    barcodeLastPlayed = data.matches[0].timestamp;
+    barcodeDecay = barcodeLastPlayed + 2419200000;
+    barcodeLastPlayed = new Date(barcodeLastPlayed).toLocaleString();
+    barcodeDecay = new Date(barcodeDecay).toLocaleString();
+    barcodePlatform = data.matches[0].platformId;
   })
   api.get('eun1', 'summoner.getByAccountId', 'YOUR_ACCOUNTID_HERE') //accountid here
   .then(data =>{
-    uwumidIconId = data.profileIconId;
-    uwumidName = data.name;
+    barcodeIconId = data.profileIconId;
+    barcodeName = data.name;
   })
   api.get('eun1', 'league.getLeagueEntriesForSummoner', 'YOUR_ID_HERE') //id here
     .then(data =>{
-      uwumidRank = data[0].tier;
-      uwumidDiv = data[0].rank;
-      uwumidLp = data[0].leaguePoints;
-      uwumidWins = data[0].wins;
-      uwumidLosses = data[0].losses;
-      uwumidWr = Math.floor(percentage(data[0].wins,data[0].wins+data[0].losses));
+      barcodeRank = data[0].tier;
+      barcodeDiv = data[0].rank;
+      barcodeLp = data[0].leaguePoints;
+      barcodeWins = data[0].wins;
+      barcodeLosses = data[0].losses;
+      barcodeWr = Math.floor(percentage(data[0].wins,data[0].wins+data[0].losses));
     })
    ...
 ```
