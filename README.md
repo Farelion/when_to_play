@@ -56,7 +56,7 @@ If you want to change accounts to yours, heres step by step guide<br />
 2. Click on second GET - Get a summoner by summoner name<br />
 3. Scroll down to PATH PARAMETERS and as value use your summoner name<br />
 4. Choose region below<br />
-5. Hit EXECUTE REQUEST<br />
+5. Click EXECUTE REQUEST<br />
 6. Under RESPONSE BODY you will see<br />
 ```node
 ...
