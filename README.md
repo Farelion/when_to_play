@@ -31,7 +31,7 @@ So it looks like this
 ```      
       
 <br />
-We are ready to start app<br />
+We are ready to start app
 
 ```node
 npm start
