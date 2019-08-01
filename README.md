@@ -34,7 +34,7 @@ Then install all dependencies
 ```node
 npm install
 ```
-Put in your [RIOT API](https://developer.riotgames.com/) key
+Put in your [RIOT API](https://developer.riotgames.com/) key (it expires after 24h)
 
 ```node
 let api = TeemoJS('RGAPI-KEY-HERE');
