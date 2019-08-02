@@ -4,7 +4,7 @@ const port = 3000
 
 app.use(express.static('public'));
 
-//Serves all the request which includes /images in the url from Images folder
+//Serves all the request which includes /img in the url from img folder
 app.use('/img', express.static(__dirname + '/img'));
 app.use('/views/css', express.static(__dirname + '/views/css'));
 const TeemoJS = require('teemojs');
@@ -16,66 +16,30 @@ app.set('view engine', 'pug')
 app.get('/', function (req, res) {
   // setting variables for data
 
-  // uwu mid - eune1
-  var uwumidLastPlayed = [];
-  var uwumidDecay = [];
-  var uwumidRank = [];
-  var uwumidDiv = [];
-  var uwumidLp = [];
-  var uwumidWins = [];
-  var uwumidLosses = [];
-  var uwumidWr = [];
-  var uwumidIconId = [];
-  var uwumidName = [];
-  var uwumidPlatform = [];
-// fffarelll - eune2
-  var fffarelllLastPlayed = [];
-  var fffarelllDecay = [];
-  var fffarelllRank = [];
-  var fffarelllDiv = [];
-  var fffarelllLp = [];
-  var fffarelllWins = [];
-  var fffarelllLosses = [];
-  var fffarelllWr = [];
-  var fffarelllIconId = [];
-  var fffarelllName = [];
-  var fffarelllPlatform = [];
-// barcode - eune3
-  var barcodeLastPlayed = [];
-  var barcodeDecay = [];
-  var barcodeRank = [];
-  var barcodeDiv = [];
-  var barcodeLp = [];
-  var barcodeWins = [];
-  var barcodeLosses = [];
-  var barcodeWr = [];
-  var barcodeIconId = [];
-  var barcodeName = [];
-  var barcodePlatform = [];
-// farel - euw1
-  var farelLastPlayed = [];
-  var farelDecay = [];
-  var farelRank = [];
-  var farelDiv = [];
-  var farelLp = [];
-  var farelWins = [];
-  var farelLosses = [];
-  var farelWr = [];
-  var farelIconId = [];
-  var farelName = [];
-  var farelPlatform = [];
-//adbutap - euw2
-  var adcbutapLastPlayed = [];
-  var adcbutapDecay = [];
-  var adcbutapRank = [];
-  var adcbutapDiv = [];
-  var adcbutapLp = [];
-  var adcbutapWins = [];
-  var adcbutapLosses = [];
-  var adcbutapWr = [];
-  var adcbutapIconId = [];
-  var adcbutapName = [];
-  var adcbutapPlatform = [];
+// example1 - if u want to add more accounts use example1 for copy
+  var example1LastPlayed = [];
+  var example1Decay = [];
+  var example1Rank = [];
+  var example1Div = [];
+  var example1Lp = [];
+  var example1Wins = [];
+  var example1Losses = [];
+  var example1Wr = [];
+  var example1IconId = [];
+  var example1Name = [];
+  var example1Platform = [];
+//example2
+  var example2LastPlayed = [];
+  var example2Decay = [];
+  var example2Rank = [];
+  var example2Div = [];
+  var example2Lp = [];
+  var example2Wins = [];
+  var example2Losses = [];
+  var example2Wr = [];
+  var example2IconId = [];
+  var example2Name = [];
+  var example2Platform = [];
 
 
   // function to create winratio
@@ -86,195 +50,84 @@ app.get('/', function (req, res) {
 
 // get data from riot api into vars
 
-  // uwu mid - eune1 - data 
-  api.get('eun1', 'match.getMatchlist1','JEnMtbssFeaJMjfzmT64odSC-__AG4BvvCU7ss22Do0rbQ')
+ // example1 - data
+  api.get('YOUR_REGION_HERE', 'match.getMatchlist1','YOUR_ACCOUNTID_HERE')
   .then(data=>{
-    uwumidLastPlayed = data.matches[0].timestamp;
-    uwumidDecay = uwumidLastPlayed + 2419200000;
-    uwumidLastPlayed = new Date(uwumidLastPlayed).toLocaleString();
-    uwumidDecay = new Date(uwumidDecay).toLocaleString();
-    uwumidPlatform = data.matches[0].platformId;
+    example1LastPlayed = data.matches[0].timestamp;
+    example1Decay = example1LastPlayed + 2419200000;
+    example1LastPlayed = new Date(example1LastPlayed).toLocaleString();
+    example1Decay = new Date(example1Decay).toLocaleString();
+    example1Platform = data.matches[0].platformId;
   })
-  api.get('eun1', 'summoner.getByAccountId', 'JEnMtbssFeaJMjfzmT64odSC-__AG4BvvCU7ss22Do0rbQ')
+  api.get('YOUR_REGION_HERE', 'summoner.getByAccountId', 'YOUR_ACCOUNTID_HERE')
   .then(data =>{
-    uwumidIconId = data.profileIconId;
-    uwumidName = data.name;
+    example1IconId = data.profileIconId;
+    example1Name = data.name;
   })
-  api.get('eun1', 'league.getLeagueEntriesForSummoner', 'qRN6L8wFLPaL-CiXMHPzne4yOyz_unlhs4Q1j-8BqPeYaa0')
+  api.get('YOUR_REGION_HERE', 'league.getLeagueEntriesForSummoner', 'YOUR_ID_HERE')
     .then(data =>{
-      uwumidRank = data[0].tier;
-      uwumidDiv = data[0].rank;
-      uwumidLp = data[0].leaguePoints;
-      uwumidWins = data[0].wins;
-      uwumidLosses = data[0].losses;
-      uwumidWr = Math.floor(percentage(data[0].wins,data[0].wins+data[0].losses));
-    })
-  
-
-  // fffarelll - eune2 - data 
-  api.get('eun1', 'match.getMatchlist1','hf_JRYJHE9Wc5rf9uBizH5XvKcz9v-VrYjqHFlbAckszPss')
-  .then(data=>{
-    fffarelllLastPlayed = data.matches[0].timestamp;
-    fffarelllDecay = fffarelllLastPlayed + 2419200000;
-    fffarelllLastPlayed = new Date(fffarelllLastPlayed).toLocaleString();
-    fffarelllDecay = new Date(fffarelllDecay).toLocaleString();
-    fffarelllPlatform = data.matches[0].platformId;
-  })
-  api.get('eun1', 'summoner.getByAccountId', 'hf_JRYJHE9Wc5rf9uBizH5XvKcz9v-VrYjqHFlbAckszPss')
-  .then(data =>{
-    fffarelllIconId = data.profileIconId;
-    fffarelllName = data.name;
-  })
-  api.get('eun1', 'league.getLeagueEntriesForSummoner', 'kISXQwAoMgRTYX6gSb5DxOFHlQLolNGosNgw6a3iQSsES7c')
-    .then(data =>{
-      fffarelllRank = data[0].tier;
-      fffarelllDiv = data[0].rank;
-      fffarelllLp = data[0].leaguePoints;
-      fffarelllWins = data[0].wins;
-      fffarelllLosses = data[0].losses;
-      fffarelllWr = Math.floor(percentage(data[0].wins,data[0].wins+data[0].losses));
-    })
-
-
- // barcode - eune3 - data      "accountId": "cFrsl9J4iu4EALg5IwTHo1gNm7U1aQ8tUAKPtA4HlvHHBO3RObnP-UN2",  "id": "mpTDbm9HX5xzPBlrWQcc0wFkfxo9QfTDEhN5Tpep-ehzgxo",
-  api.get('eun1', 'match.getMatchlist1','cFrsl9J4iu4EALg5IwTHo1gNm7U1aQ8tUAKPtA4HlvHHBO3RObnP-UN2')
-  .then(data=>{
-    barcodeLastPlayed = data.matches[0].timestamp;
-    barcodeDecay = barcodeLastPlayed + 2419200000;
-    barcodeLastPlayed = new Date(barcodeLastPlayed).toLocaleString();
-    barcodeDecay = new Date(barcodeDecay).toLocaleString();
-    barcodePlatform = data.matches[0].platformId;
-  })
-  api.get('eun1', 'summoner.getByAccountId', 'cFrsl9J4iu4EALg5IwTHo1gNm7U1aQ8tUAKPtA4HlvHHBO3RObnP-UN2')
-  .then(data =>{
-    barcodeIconId = data.profileIconId;
-    barcodeName = data.name;
-  })
-  api.get('eun1', 'league.getLeagueEntriesForSummoner', 'mpTDbm9HX5xzPBlrWQcc0wFkfxo9QfTDEhN5Tpep-ehzgxo')
-    .then(data =>{
-      barcodeRank = data[0].tier;
-      barcodeDiv = data[0].rank;
-      barcodeLp = data[0].leaguePoints;
-      barcodeWins = data[0].wins;
-      barcodeLosses = data[0].losses;
-      barcodeWr = Math.floor(percentage(data[0].wins,data[0].wins+data[0].losses));
-    })
-
-
- // farel - euw1 - data 
-  api.get('euw1', 'match.getMatchlist1','n_JdJ7QK-C74C0efu6rBfDO1naQO3aDd3w46Ip79ba5FL_0')
-  .then(data=>{
-    farelLastPlayed = data.matches[0].timestamp;
-    farelDecay = farelLastPlayed + 2419200000;
-    farelLastPlayed = new Date(farelLastPlayed).toLocaleString();
-    farelDecay = new Date(farelDecay).toLocaleString();
-    farelPlatform = data.matches[0].platformId;
-  })
-  api.get('euw1', 'summoner.getByAccountId', 'n_JdJ7QK-C74C0efu6rBfDO1naQO3aDd3w46Ip79ba5FL_0')
-  .then(data =>{
-    farelIconId = data.profileIconId;
-    farelName = data.name;
-  })
-  api.get('euw1', 'league.getLeagueEntriesForSummoner', 'UWPZgVdy9FzegiTLmFPdMV0ZpGqgYOrVHkBr-Xexj4lqo2M')
-    .then(data =>{
-      farelRank = data[0].tier;
-      farelDiv = data[0].rank;
-      farelLp = data[0].leaguePoints;
-      farelWins = data[0].wins;
-      farelLosses = data[0].losses;
-      farelWr = Math.floor(percentage(data[0].wins,data[0].wins+data[0].losses));
+      example1Rank = data[0].tier;
+      example1Div = data[0].rank;
+      example1Lp = data[0].leaguePoints;
+      example1Wins = data[0].wins;
+      example1Losses = data[0].losses;
+      example1Wr = Math.floor(percentage(data[0].wins,data[0].wins+data[0].losses));
     })
 
 
   // set timer before last part - otherwise some data don't show up beacuse requests are async
   setTimeout(() => {
 
-  // adcbutap - euw2 - data 
-    api.get('euw1', 'summoner.getByAccountId', '5fMAg5rcacWIwDCvitVVRVUXZ-O1975PrhfyCPZcJyiosg3f7ntWmgkZ')
+  // example2 - data 
+    api.get('YOUR_REGION_HERE', 'summoner.getByAccountId', 'OUR_ACCOUNTID_HERE') //accountid here
     .then(data =>{
-      adcbutapIconId = data.profileIconId;
-      adcbutapName = data.name;
+      example2IconId = data.profileIconId;
+      example2Name = data.name;
     })
-    api.get('euw1', 'league.getLeagueEntriesForSummoner', 'UUP6WQbmTq_SZuHOAJiKYA9cbaYkQVUj2UBOFAh43zQoBQSf')
+    api.get('YOUR_REGION_HERE', 'league.getLeagueEntriesForSummoner', 'YOUR_ID_HERE') //id here
     .then(data =>{
-      adcbutapRank = data[0].tier;
-      adcbutapDiv = data[0].rank;
-      adcbutapLp = data[0].leaguePoints;
-      adcbutapWins = data[0].wins;
-      adcbutapLosses = data[0].losses;
-      adcbutapWr = Math.floor(percentage(data[0].wins,data[0].wins+data[0].losses));
+      example2Rank = data[0].tier;
+      example2Div = data[0].rank;
+      example2Lp = data[0].leaguePoints;
+      example2Wins = data[0].wins;
+      example2Losses = data[0].losses;
+      example2Wr = Math.floor(percentage(data[0].wins,data[0].wins+data[0].losses)); //accountid here
     })
 
-    api.get('euw1', 'match.getMatchlist1','5fMAg5rcacWIwDCvitVVRVUXZ-O1975PrhfyCPZcJyiosg3f7ntWmgkZ')
+    api.get('YOUR_REGION_HERE', 'match.getMatchlist1','OUR_ACCOUNTID_HERE')
     .then(data=>{
-      adcbutapLastPlayed = data.matches[0].timestamp;
-      adcbutapDecay = adcbutapLastPlayed + 2419200000;
-      adcbutapLastPlayed = new Date(adcbutapLastPlayed).toLocaleString();
-      adcbutapDecay = new Date(adcbutapDecay).toLocaleString();
-      adcbutapPlatform = data.matches[0].platformId;
+      example2LastPlayed = data.matches[0].timestamp;
+      example2Decay = example2LastPlayed + 2419200000;
+      example2LastPlayed = new Date(example2LastPlayed).toLocaleString();
+      example2Decay = new Date(example2Decay).toLocaleString();
+      example2Platform = data.matches[0].platformId;
 
         // render all data from vars
         res.render('index', {
-           // uwu mid - eune1 - data render
-           uwumidPlatform: uwumidPlatform,
-           uwumidDecay: uwumidDecay,
-           uwumidIconId: uwumidIconId,
-           uwumidLastPlayed: uwumidLastPlayed,
-           uwumidRank: uwumidRank,
-           uwumidDiv: uwumidDiv,
-           uwumidLp: uwumidLp,
-           uwumidWins: uwumidWins,
-           uwumidLosses: uwumidLosses ,
-           uwumidWr: uwumidWr,
-           uwumidName: uwumidName,
-           // fffarelll - eune2 - data render
-           fffarelllPlatform: fffarelllPlatform,
-           fffarelllDecay: fffarelllDecay,
-           fffarelllIconId: fffarelllIconId,
-           fffarelllLastPlayed: fffarelllLastPlayed,
-           fffarelllRank: fffarelllRank,
-           fffarelllDiv: fffarelllDiv,
-           fffarelllLp: fffarelllLp,
-           fffarelllWins: fffarelllWins,
-           fffarelllLosses: fffarelllLosses,
-           fffarelllWr: fffarelllWr,
-           fffarelllName: fffarelllName,
-           // barcode - eune3 - data render
-           barcodePlatform: barcodePlatform,
-           barcodeDecay: barcodeDecay,
-           barcodeIconId: barcodeIconId,
-           barcodeLastPlayed: barcodeLastPlayed,
-           barcodeRank: barcodeRank,
-           barcodeDiv: barcodeDiv,
-           barcodeLp: barcodeLp,
-           barcodeWins: barcodeWins,
-           barcodeLosses: barcodeLosses,
-           barcodeWr: barcodeWr,
-           barcodeName: barcodeName,
-           // farel - euw1 - data render
-           farelPlatform: farelPlatform,
-           farelDecay: farelDecay,
-           farelIconId: farelIconId,
-           farelLastPlayed: farelLastPlayed,
-           farelRank: farelRank,
-           farelDiv: farelDiv,
-           farelLp: farelLp,
-           farelWins: farelWins,
-           farelLosses: farelLosses,
-           farelWr: farelWr,
-           farelName: farelName,
-           // adcbutap - euw2 - data render
-           adcbutapPlatform: adcbutapPlatform,
-           adcbutapDecay: adcbutapDecay,
-           adcbutapIconId: adcbutapIconId,
-           adcbutapLastPlayed: adcbutapLastPlayed,
-           adcbutapRank: adcbutapRank,
-           adcbutapDiv: adcbutapDiv,
-           adcbutapLp: adcbutapLp,
-           adcbutapWins: adcbutapWins,
-           adcbutapLosses: adcbutapLosses,
-           adcbutapWr: adcbutapWr,
-           adcbutapName: adcbutapName
+           // example1 -  data render
+           example1Platform: example1Platform,
+           example1Decay: example1Decay,
+           example1IconId: example1IconId,
+           example1LastPlayed: example1LastPlayed,
+           example1Rank: example1Rank,
+           example1Div: example1Div,
+           example1Lp: example1Lp,
+           example1Wins: example1Wins,
+           example1Losses: example1Losses,
+           example1Wr: example1Wr,
+           example1Name: example1Name,
+           // example2 - data render
+           example2Platform: example2Platform,
+           example2Decay: example2Decay,
+           example2IconId: example2IconId,
+           example2LastPlayed: example2LastPlayed,
+           example2Rank: example2Rank,
+           example2Div: example2Div,
+           example2Lp: example2Lp,
+           example2Wins: example2Wins,
+           example2Losses: example2Losses,
+           example2Wr: example2Wr,
+           example2Name: example2Name
      });
     })
   }, 2000);
