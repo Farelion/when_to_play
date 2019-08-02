@@ -97,27 +97,27 @@ If you want to change accounts to yours, heres step by step guide<br />
 
 ```node
   ... 
-  api.get('YOUR_REGION_HERE', 'match.getMatchlist1','YOUR_ACCOUNTID_HERE') //accountid here
+   api.get('YOUR_REGION_HERE', 'match.getMatchlist1','YOUR_ACCOUNTID_HERE')
   .then(data=>{
-    barcodeLastPlayed = data.matches[0].timestamp;
-    barcodeDecay = barcodeLastPlayed + 2419200000;
-    barcodeLastPlayed = new Date(barcodeLastPlayed).toLocaleString();
-    barcodeDecay = new Date(barcodeDecay).toLocaleString();
-    barcodePlatform = data.matches[0].platformId;
+    example1LastPlayed = data.matches[0].timestamp;
+    example1Decay = example1LastPlayed + 2419200000;
+    example1LastPlayed = new Date(example1LastPlayed).toLocaleString();
+    example1Decay = new Date(example1Decay).toLocaleString();
+    example1Platform = data.matches[0].platformId;
   })
-  api.get('YOUR_REGION_HERE', 'summoner.getByAccountId', 'YOUR_ACCOUNTID_HERE') //accountid here
+  api.get('YOUR_REGION_HERE', 'summoner.getByAccountId', 'YOUR_ACCOUNTID_HERE')
   .then(data =>{
-    barcodeIconId = data.profileIconId;
-    barcodeName = data.name;
+    example1IconId = data.profileIconId;
+    example1Name = data.name;
   })
-  api.get('YOUR_REGION_HERE', 'league.getLeagueEntriesForSummoner', 'YOUR_ID_HERE') //id here
+  api.get('YOUR_REGION_HERE', 'league.getLeagueEntriesForSummoner', 'YOUR_ID_HERE')
     .then(data =>{
-      barcodeRank = data[0].tier;
-      barcodeDiv = data[0].rank;
-      barcodeLp = data[0].leaguePoints;
-      barcodeWins = data[0].wins;
-      barcodeLosses = data[0].losses;
-      barcodeWr = Math.floor(percentage(data[0].wins,data[0].wins+data[0].losses));
+      example1Rank = data[0].tier;
+      example1Div = data[0].rank;
+      example1Lp = data[0].leaguePoints;
+      example1Wins = data[0].wins;
+      example1Losses = data[0].losses;
+      example1Wr = Math.floor(percentage(data[0].wins,data[0].wins+data[0].losses));
     })
    ...
 ```
