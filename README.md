@@ -1,5 +1,5 @@
 # When_to_play <br/>
-
+![alt text](https://github.com/Farelion/when_to_play/blob/master/preview/PIC_WHEN_TO_PLAY.png?raw=true)
 #### Disclaimer <br/>
 Keep in mind that its non-commercial project with purpose of learning new things, also was created to automatize some stuff that had to be done manually. Its pretty much my first contact with most of technologies used there (even writing this documentation). Feel free to msg me if you have any questions/tips.
 
